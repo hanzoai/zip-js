@@ -38,7 +38,7 @@
   ],
   "scripts": {
     "build": "tsc -p tsconfig.json",
-    "test": "node --test --import tsx 'src/**/*.test.ts'",
+    "test": "node --test --import tsx src/handler.test.ts src/runtime/goja.test.ts src/runtime/javy.test.ts src/build/cli.test.ts",
     "examples": "node scripts/build-examples.mjs",
     "verify": "node scripts/verify-examples.mjs",
     "clean": "rm -rf dist examples/*/dist examples/*/*.js"
