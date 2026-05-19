@@ -138,7 +138,7 @@ const program = new Command();
 program
   .name("zip-js")
   .description("Build a typed TS handler into a runtime-ready zip extension.")
-  .version("0.1.0");
+  .version("0.1.1");
 
 program
   .command("build")
