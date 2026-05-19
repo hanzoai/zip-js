@@ -1,0 +1,7 @@
+{
+  "name": "validate-email",
+  "version": "0.1.0",
+  "runtime": "goja",
+  "module": "validate.js",
+  "exports": ["validate"]
+}
