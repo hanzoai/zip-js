@@ -1,0 +1,32 @@
+zip-js
+Copyright (c) 2026, Hanzo AI Inc.
+
+This product includes software developed by third parties:
+
+----------------------------------------------------------------------
+
+esbuild
+Copyright (c) 2020 Evan Wallace
+Licensed under the MIT License.
+https://github.com/evanw/esbuild
+
+----------------------------------------------------------------------
+
+commander
+Copyright (c) 2011 TJ Holowaychuk
+Licensed under the MIT License.
+https://github.com/tj/commander.js
+
+----------------------------------------------------------------------
+
+TypeScript
+Copyright (c) Microsoft Corporation.
+Licensed under the Apache License, Version 2.0.
+https://github.com/microsoft/TypeScript
+
+----------------------------------------------------------------------
+
+For the wasm-targeted build backend, zip-js shells out to the upstream
+JS-to-wasm compiler maintained by the Bytecode Alliance. That tool's
+source and license live with that project. zip-js wraps its invocation
+behind a stable interface but does not bundle its binary.
