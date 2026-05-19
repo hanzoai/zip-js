@@ -1,0 +1,12 @@
+{
+  "name": "@hanzo/zip-example-validate-email",
+  "version": "0.1.0",
+  "private": true,
+  "type": "module",
+  "scripts": {
+    "build": "node ../../scripts/build-example.mjs ."
+  },
+  "dependencies": {
+    "@hanzo/zip": "*"
+  }
+}
