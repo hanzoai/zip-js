@@ -3,6 +3,12 @@
 Tracks Hanzo-internal deltas not visible in `CHANGELOG.md` (audit
 traceability, version pin justifications, brand-policy decisions, etc.).
 
+## v0.1.1
+
+- CI: replace shell-glob test target with explicit file list so the
+  Node 20 runner (which lacks `--test` glob expansion) runs the suite.
+  Pure tooling fix; no behavior change.
+
 ## v0.1.0 (initial release)
 
 - First public release of `@hanzo/zip`.
