@@ -1,0 +1,43 @@
+name: CI
+
+on:
+  push:
+    branches: [main]
+    tags: ['v*']
+  pull_request:
+
+jobs:
+  build:
+    runs-on: hanzo-build-linux-amd64
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: actions/setup-node@v4
+        with:
+          node-version: '20'
+
+      - name: Install dependencies
+        run: npm ci
+
+      - name: Type-check + build
+        run: npm run build
+
+      - name: Unit tests
+        run: npm test
+
+      - name: Build examples
+        run: npm run examples
+
+      - name: Verify examples (V8 host equivalence)
+        run: npm run verify
+
+      - name: Upload built examples
+        uses: actions/upload-artifact@v4
+        with:
+          name: examples
+          path: |
+            examples/hello/hello.js
+            examples/validate-email/validate.js
+            examples/policy-eval/policy_eval.js
+          if-no-files-found: error
+          retention-days: 30
