@@ -1,3 +1,5 @@
+<p align="center"><img src=".github/hero.svg" alt="zip-js" width="880"></p>
+
 # @hanzo/zip
 
 Write zip-mounted handlers in idiomatic TypeScript.
