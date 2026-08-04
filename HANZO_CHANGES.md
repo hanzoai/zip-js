@@ -3,6 +3,15 @@
 Tracks Hanzo-internal deltas not visible in `CHANGELOG.md` (audit
 traceability, version pin justifications, brand-policy decisions, etc.).
 
+## Unreleased
+
+- Relicensed BSD-3-Clause → `MIT OR Apache-2.0` per HIP-0137 (`hanzoai/hips`, `HIPs/hip-0137-one-license.md`). `LICENSE` is now
+  the dual declaration, with `LICENSE-APACHE` + `LICENSE-MIT` beside it;
+  `package.json` and the root `package-lock.json` entry follow. The v0.1.0
+  note below records what was true at that release and is left as-is.
+  `NOTICE` is unchanged — it credits build-time dependencies (esbuild,
+  commander, TypeScript), which keep their own licences.
+
 ## v0.1.1
 
 - CI: replace shell-glob test target with explicit file list so the
