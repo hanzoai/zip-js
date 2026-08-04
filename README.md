@@ -179,4 +179,5 @@ manifest-only `runtime` switch.
 
 ## License
 
-BSD-3-Clause. See `LICENSE`. Upstream credits in `NOTICE`.
+MIT OR Apache-2.0, at your option — per [HIP-0137](https://github.com/hanzoai/hips/blob/main/HIPs/hip-0137-one-license.md). See `LICENSE`.
+Upstream credits in `NOTICE`.
