@@ -1,0 +1,23 @@
+# hanzoai/zip-js — the Zip build/runtime toolkit (TypeScript, npm). A library:
+# it publishes to npm from a tag, builds no image and deploys nowhere.
+#
+# The repo's own three CI steps, verbatim: install from the lockfile, compile,
+# run the suite.
+#   npm ci     — installs exactly package-lock.json, so a lockfile that has
+#                drifted from package.json fails here instead of resolving to
+#                something no other machine will ever install.
+#   npm run build — `tsc -p tsconfig.json`. This is the typecheck AND the
+#                published artifact; there is no separate check to skip.
+#   npm test   — node:test over the handler and the goja/javy/cli runtimes.
+#
+# Not `npm run examples` / `npm run verify`: those compile the example guests
+# through the Javy toolchain, which downloads a WASM build at run time. A gate
+# that reaches the network fails when the network does, and says nothing about
+# the commit.
+test:
+  - name: build-and-test
+    run: |
+      set -e
+      npm ci
+      npm run build
+      npm test
