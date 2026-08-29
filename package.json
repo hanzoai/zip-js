@@ -1,7 +1,7 @@
 {
   "name": "@hanzo/zip",
   "version": "0.1.1",
-  "description": "TypeScript SDK for HIP-0105 in-process extensions — write typed handlers, compile to goja-loadable JS.",
+  "description": "TypeScript SDK for HIP-0105 in-process extensions \u2014 write typed handlers, compile to goja-loadable JS.",
   "license": "MIT OR Apache-2.0",
   "author": "Hanzo AI Inc.",
   "homepage": "https://github.com/hanzoai/zip-js",
@@ -44,13 +44,13 @@
     "clean": "rm -rf dist examples/*/dist examples/*/*.js"
   },
   "dependencies": {
-    "commander": "14.0.3",
-    "esbuild": "0.28.0"
+    "commander": "^15.0.0",
+    "esbuild": "^0.28.2"
   },
   "devDependencies": {
-    "@types/node": "22.10.5",
-    "tsx": "4.22.2",
-    "typescript": "5.9.3"
+    "@types/node": "26.4.0",
+    "tsx": "^4.23.12",
+    "typescript": "7.0.2"
   },
   "engines": {
     "node": ">=20"
